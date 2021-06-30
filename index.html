@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WebXR Layer Sample</title>
         <link rel="stylesheet" href="/style.css" />
+        <!-- <script src="https://immersive-web.github.io/webxr-layers-polyfill/build/webxr-layers-polyfill.js"></script> -->
+        <script type="module">
+            import {polyfill} from "https://immersive-web.github.io/webxr-layers-polyfill/build/webxr-layers-polyfill.js";
+            let layersPolyfill = new WebXRLayersPolyfill();
+        </script>
     </head>
     <body>
         <div class="container" style="display: none">
@@ -38,6 +43,13 @@
                         <p>
                             An equirect layer backdrop with a quad layer,
                             displaying stereo video
+                        </p>
+                    </a>
+
+                    <a href="/sandboxExample" class="card">
+                        <h3>Sandbox</h3>
+                        <p>
+                            sandbox
                         </p>
                     </a>
                 </div>

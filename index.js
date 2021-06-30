@@ -4,6 +4,7 @@ import {
     SimpleScene,
     SimpleEquirectMediaLayer,
     MultipleLayers,
+    sandboxExample
 } from "./apps";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
             break;
         case "/multiple-layers":
             app = new MultipleLayers();
+            break;
+        case "/sandboxExample":
+            app = new sandboxExample();
             break;
         default:
             const indexContainer = document.querySelector(".container");
