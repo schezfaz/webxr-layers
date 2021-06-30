@@ -1,6 +1,6 @@
 # WebXR - Nik Lever
 
-- https is required (secure site)
+- https is required (secure site) [OPENSSL]
 
 Three.js: WebGL Renderer (y-axis points up: EUS system | x(East) Y(Up) Z(South))
 
