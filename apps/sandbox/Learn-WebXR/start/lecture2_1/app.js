@@ -1,5 +1,6 @@
 import * as THREE from '../../libs/three/three.module.js';
-import { VRButton } from '../../libs/three/jsm/VRButton.js';
+//import { VRButton } from '../../libs/three/jsm/VRButton.js';
+import { VRButton } from './VRButton.js';
 import { XRControllerModelFactory } from '../../libs/three/jsm/XRControllerModelFactory.js';
 import { BoxLineGeometry } from '../../libs/three/jsm/BoxLineGeometry.js';
 import { Stats } from '../../libs/stats.module.js';
@@ -102,7 +103,8 @@ class App{
 		container.appendChild(this.stats.dom);
 
 		this.initScene();
-		this.setupXR();
+		//this.setupXR();
+		this.setupVR();
 
         window.addEventListener('resize', this.resize.bind(this) );
 		this.renderer.setAnimationLoop(this.render.bind(this));
@@ -149,7 +151,14 @@ class App{
 	}
 
 	setupXR(){
+		this.renderer.xr.enabled = true;
+		document.body.appendChild(VRButton.createButton(this.renderer));
+	}
 
+	/*3-2*/
+	setupVR(){
+		this.renderer.xr.enabled = true;
+		const button = new VRButton(this.renderer);
 	}
     
 	render( ) {
